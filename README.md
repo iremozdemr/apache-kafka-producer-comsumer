@@ -57,6 +57,7 @@ Make sure you have the following tools installed:
     ./kafka_2.13-3.0.0/bin/kafka-topics.sh --describe --topic search --bootstrap-server localhost:9092
 
 2. Start the Producer
+
     Run the producer application to send messages:
     ```bash
     mvn exec:java -Dexec.mainClass="com.example.ProducerApp"
