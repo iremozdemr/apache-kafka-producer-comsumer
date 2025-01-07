@@ -56,21 +56,21 @@ Make sure you have the following tools installed:
     ```bash
     ./kafka_2.13-3.0.0/bin/kafka-topics.sh --describe --topic search --bootstrap-server localhost:9092
 
-2. Start the Producer
-
-    Run the producer application to send messages:
+2. To test the ProducerApp, you can use the following command to consume messages from the search topic:
     ```bash
-    mvn exec:java -Dexec.mainClass="com.example.ProducerApp"
+    ./kafka_2.13-3.0.0/bin/kafka-console-consumer.sh \
+    --topic search \
+    --bootstrap-server localhost:9092 \
+    --from-beginning
+    ```
+    This command will display all messages sent to the search topic from the beginning, allowing you to verify if the producer successfully sends messages to the Kafka broker.
 
-3. Start the Consumer
+3. To test the ConsumerApp, you can use the following command to produce messages to the search topic:
     ```bash
-    mvn exec:java -Dexec.mainClass="com.example.ConsumerApp"
+    ./kafka_2.13-3.0.0/bin/kafka-console-producer.sh --topic search --bootstrap-server localhost:9092
+    ```
 
-4. Verify Messages with Kafka Console Consumer
-    You can also verify messages using Kafka CLI:
-    ```bash
-    ./kafka_2.13-3.0.0/bin/kafka-console-consumer.sh --topic search --bootstrap-server localhost:9092 --from-beginning
-
+    After running this command, you can type messages directly into the terminal. These messages will be sent to the search topic, and the ConsumerApp will consume and display them, allowing you to verify if the consumer is working correctly.
 ---
 
 ## **Project Structure**
