@@ -51,7 +51,7 @@ Make sure you have the following tools installed:
     ```bash
     ./kafka_2.13-3.0.0/bin/kafka-topics.sh --create --topic search --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
-Verify the topic
+    Verify the topic
     ```bash
     ./kafka_2.13-3.0.0/bin/kafka-topics.sh --describe --topic search --bootstrap-server localhost:9092
 
