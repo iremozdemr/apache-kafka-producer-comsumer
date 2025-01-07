@@ -50,6 +50,7 @@ Make sure you have the following tools installed:
 1. Create a topic named search:
     ```bash
     ./kafka_2.13-3.0.0/bin/kafka-topics.sh --create --topic search --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+    ```
 
     Verify the topic
     ```bash
