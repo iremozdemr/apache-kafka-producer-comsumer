@@ -36,8 +36,8 @@ Make sure you have the following tools installed:
 
 1. Clone the repository
     ```bash
-    git clone https://github.com/iremozdemr/apache-kafka-producer-comsumer.git
-    cd kafka-java
+    git clone https://github.com/iremozdemr/apache-kafka-producer-consumer.git
+    cd apache-kafka-producer-consumer
 
 2. Build the Maven project
     ```bash
